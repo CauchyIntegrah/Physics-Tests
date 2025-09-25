@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from scipy.integrate import odeint
 
-sigma = 10# Prandtl's Number
+sigma = 10 # Prandtl's Number
 beta = 8/3 # Physical dimension
 rho = 28   # Rayleigh number (also seen in fluiddynamics)
 def systemOfODES(vector, t, sigma, beta, rho):
@@ -57,5 +57,6 @@ def update(frame):
     
     
 animation = FuncAnimation(fig, update, frames=len(timePoints), interval=25, blit=False)
+
 
 plt.show()
